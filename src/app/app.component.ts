@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [NavigationComponent, RouterModule]  // Добавяме RouterModule тук
 })
 export class AppComponent {
-  title = 'preject-vestidor';
+  title = 'project-vestidor';
 }
