@@ -34,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -40px; /* Премества изображението нагоре */
+    margin-top: -60px; /* Премества изображението нагоре */
 }
 
 .img-box img {
@@ -45,7 +45,7 @@
 }
 
 /* Стил за бутона */
-.contact-btn {
+.catalog-btn {
     display: inline-block;
     padding: 12px 24px;
     background-color: #84cc10;
@@ -58,6 +58,6 @@
     margin-top: 20px; /* Разстояние над бутона */
 }
 
-.contact-btn:hover {
+.catalog-btn:hover {
     background-color: #56ad05;
 }
