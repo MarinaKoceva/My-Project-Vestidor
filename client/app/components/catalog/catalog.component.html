@@ -1,0 +1,15 @@
+<div class="catalog-container">
+    <h1>Catalog</h1>
+    <div class="items-grid">
+      <!-- Примерни елементи - ще се заменят с динамични данни -->
+      <div class="item-card" *ngFor="let item of items">
+        <img [src]="item.image" alt="Item Image" />
+        <div class="item-details">
+          <h4>{{ item.name }}</h4>
+          <p>{{ item.condition }}</p>
+          <p><strong>{{ item.price }} €</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
