@@ -1,0 +1,86 @@
+/* Главен контейнер за Login */
+.login-container {
+    min-height: 70vh; /* Увеличи височината на контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Фон на секцията */
+  }
+  
+  /* Единен контейнер за формата и снимката */
+  .login-content {
+    display: flex;
+    gap: 30px; /* Разстояние между формата и снимката */
+    border-radius: 10px; /* Заоблени ъгли */
+    border: 1px solid #ddd; /* Граница */
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff; /* Бял фон */
+  }
+  
+  /* Контейнер за формата */
+  .login-form-wrapper {
+    flex: 1;
+  }
+  
+  .login-form-wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .login-form-wrapper .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-form-wrapper label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .login-form-wrapper input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Бутон за вход */
+  .btn-login {
+    width: 180px;
+    padding: 12px;
+    background-color: #84cc10;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px; /* Закръглен бутон */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 15px auto 0; /* Центрирайте бутона */
+    display: block;
+    text-align: center;
+  }
+  
+  .btn-login:hover {
+    background-color: #56ad05;
+  }
+  
+  /* Контейнер за изображението */
+  .login-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-image-wrapper img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  

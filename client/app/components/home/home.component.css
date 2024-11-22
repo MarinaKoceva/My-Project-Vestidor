@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
+    background-color: #f3eeee;
     padding: 20px;
     box-sizing: border-box; /* За да се включва padding-а във височината */
 }

@@ -65,8 +65,8 @@
 }
 
 .footer-subscribe button {
-    background-color: #ff7e29;
-    color: white;
+    background-color: #84cc10;
+    color: #fff;
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
@@ -75,5 +75,14 @@
 }
 
 .footer-subscribe button:hover {
-    background-color: #e76e21;
+    background-color: #56ad05;
 }
+footer {
+    background-color: #f8f8f8; /* Цветът на фона на футъра */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -1px 5px rgba(0, 82, 21, 0.1); /* Лека сянка за по-видим футър */
+    margin-top: auto; /* Избутва футъра в долната част */
+    width: 100%;
+  }
+  

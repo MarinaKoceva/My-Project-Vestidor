@@ -92,7 +92,8 @@
                 "client/assets"
             ],
             "styles": [
-              "client/styles.css"
+              "client/styles.css",
+              "src/app/components/navigation/navigation.component.css"
             ],
             "scripts": []
           }
