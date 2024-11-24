@@ -1,33 +1,44 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule] // Важно: Импортирайте модула тук
+  imports: [ReactiveFormsModule, HttpClientModule]
 })
 export class RegisterComponent {
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.form = this.fb.group({
+      username: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      username: ['', [Validators.required, Validators.minLength(5)]],
-      passGroup: this.fb.group({
-        password: ['', [Validators.required, Validators.minLength(6)]],
-        rePass: ['', Validators.required]
-      })
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      rePassword: ['', [Validators.required]]
     });
   }
 
-  regUser() {
+  register() {
     if (this.form.valid) {
-      console.log('User registered:', this.form.value);
+      this.http.post('http://localhost:3000/auth/register', this.form.value)
+        .subscribe({
+          next: (response) => {
+            console.log('User registered successfully:', response);
+            window.location.href = '/home';
+          },
+          error: (err) => {
+            console.error('Registration failed:', err);
+          }
+        });
+    } else {
+      console.log('Form is invalid');
     }
   }
 }
+
 
 
 /*import { Component, OnInit } from '@angular/core';
